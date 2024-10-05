@@ -10,6 +10,9 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 console.log("Hello World");
 var arr = [1, 2, 3];
 var arr_copy = __spreadArray([], arr, true);
-if (arr == arr_copy) {
+if (arr === arr_copy) {
     console.log("Both lists are equal");
 }
+var nums = [1, 2, 3, 4, 5, 100, 20.5];
+var total = nums.reduce(function (acc, curr) { return acc + curr; }, 0);
+console.log("Total from reduce: ".concat(total));
