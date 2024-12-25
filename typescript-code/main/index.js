@@ -16,3 +16,17 @@ if (arr === arr_copy) {
 var nums = [1, 2, 3, 4, 5, 100, 20.5];
 var total = nums.reduce(function (acc, curr) { return acc + curr; }, 0);
 console.log("Total from reduce: ".concat(total));
+var _loop_1 = function (i) {
+    setTimeout(function () {
+        console.log(i);
+    }, 1000);
+};
+/**
+ * Temporal Dead Zone:
+ * */
+// console.log(a); // ReferenceError: Cannot access 'a' before initialization
+// let a = 5;
+// Above code is an example of TDZ, we are trying to access the variable before it is initialized.
+for (var i = 0; i < 10; i++) {
+    _loop_1(i);
+}
